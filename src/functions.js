@@ -54,7 +54,7 @@ const getNeighbors = (board, row, column) => {
             const validRow = r >= 0 && r < board.length
             const validColumn = c >= 0 && c < board[0].length
             if (different && validRow && validColumn) {
-                neighbors.push(boar[r][c])
+                neighbors.push(board[r][c])
             }
         })
     })
@@ -68,7 +68,7 @@ const safeNeighborhood = (board, row, column) => {
 
 const openField = (board, row, column) => {
     const field = board[row][column]
-    if (!field.open) {
+    if (!field.opened) {
         field.opened = true
         if (field.mined) {
             field.exploded = true

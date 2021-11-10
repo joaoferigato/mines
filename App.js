@@ -47,11 +47,11 @@ export default class App extends Component {
 
     if (lost) {
       showMines(board)
-      Alert.alert('Perdeeeeu!', 'Tente outra vez!')
+      Alert.alert('You lost!', 'Try again!')
     }
 
     if (won) {
-      Alert.alert('Parabéns', 'Você Venceu!')
+      Alert.alert('Great!', 'You won!')
     }
 
     this.setState({ board, lost, won })
@@ -63,7 +63,7 @@ export default class App extends Component {
     const won = wonGame(board)
 
     if (won) {
-      Alert.alert('Parabéns', 'Você Venceu!')
+      Alert.alert('Great!', 'You won!')
     }
 
     this.setState({ board, won })
